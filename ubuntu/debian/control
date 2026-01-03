@@ -1,4 +1,4 @@
-Source: sdformat16
+Source: sdformat17
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -19,19 +19,19 @@ Build-Depends: cmake,
                libgz-utils4-dev,
                liburdfdom-dev,
                liburdfdom-headers-dev
-Vcs-Browser: https://github.com/gazebo-release/sdformat16-release
-Vcs-Git: https://github.com/gazebo-release/sdformat16-release
+Vcs-Browser: https://github.com/gazebo-release/sdformat17-release
+Vcs-Git: https://github.com/gazebo-release/sdformat17-release
 Standards-Version: 4.5.1
 Homepage: http://sdformat.org
 
-Package: libsdformat16
+Package: libsdformat17
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
-Depends:  sdformat16-sdf (>= ${source:Version}),
+Depends:  sdformat17-sdf (>= ${source:Version}),
           ${shlibs:Depends},
           ${misc:Depends}
-Recommends: sdformat16-cli
+Recommends: sdformat17-cli
 Multi-Arch: same
 Description: Simulation Description Format (SDF) parser - Shared library
  SDF is an XML file format that describes environments, objects, and robots
@@ -42,7 +42,7 @@ Description: Simulation Description Format (SDF) parser - Shared library
  allows conversion from previous versions. A parser is also contained within
  this package that reads SDF files and returns a C++ interface.
 
-Package: libsdformat16-dev
+Package: libsdformat17-dev
 Architecture: any
 Section: libdevel
 Depends: libtinyxml2-dev,
@@ -52,7 +52,7 @@ Depends: libtinyxml2-dev,
          libgz-utils4-dev,
          liburdfdom-dev,
          liburdfdom-headers-dev,
-         libsdformat16 (= ${binary:Version}),
+         libsdformat17 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Simulation Description Format (SDF) parser - Development files
@@ -64,7 +64,7 @@ Description: Simulation Description Format (SDF) parser - Development files
  allows conversion from previous versions. A parser is also contained within
  this package that reads SDF files and returns a C++ interface.
 
-Package: sdformat16-sdf
+Package: sdformat17-sdf
 Architecture: all
 Section: libdevel
 Depends: ${misc:Depends}
@@ -82,9 +82,9 @@ Description: Simulation Description Format (SDF) parser - SDF files
  This package contains SDF (Simulation Description Format) XML files needed by
  the libsdformat.
 
-Package: sdformat16-cli
+Package: sdformat17-cli
 Architecture: any
-Depends: libsdformat16 (= ${binary:Version}),
+Depends: libsdformat17 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: no
@@ -99,12 +99,12 @@ Description: Simulation Description Format (SDF) parser - CLI
  .
  The package ships the CLI.
 
-Package: python3-sdformat16
+Package: python3-sdformat17
 Architecture: any
 Depends: ${misc:Depends},
          python3-gz-math9,
          ${python3:Depends}
-Enhances: libsdformat16
+Enhances: libsdformat17
 Description: Simulation Description Format (SDF) parser - SDF files
  SDF is an XML file format that describes environments, objects, and robots
  in a manner suitable for robotic applications. SDF is capable of representing
@@ -116,12 +116,12 @@ Description: Simulation Description Format (SDF) parser - SDF files
  .
  This package contains the Python bindings for SDFormat
 
-Package: libsdformat16-dbg
+Package: libsdformat17-dbg
 Architecture: any
 Section: debug
 Priority: optional
 Depends:
-     libsdformat16 (= ${binary:Version}),
+     libsdformat17 (= ${binary:Version}),
      ${misc:Depends}
 Multi-Arch: same
 Description: Simulation Description Format (SDF) parser - Debugging symbols
@@ -133,7 +133,7 @@ Description: Simulation Description Format (SDF) parser - Debugging symbols
  allows conversion from previous versions. A parser is also contained within
  this package that reads SDF files and returns a C++ interface.
 
-Package: sdformat16-doc
+Package: sdformat17-doc
 Architecture: all
 Section: doc
 Depends: ${misc:Depends}, libjs-jquery
@@ -148,27 +148,3 @@ Description: Simulation Description Format (SDF) parser - Documentation
  this package that reads SDF files and returns a C++ interface.
  .
  This package contains the program documentation
-
-Package: gz-jetty-sdformat
-Depends: libsdformat16-dev (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Jetty without exposing the version number.
-
-Package: gz-jetty-sdformat-cli
-Depends: sdformat16-cli (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Jetty without exposing the version number.
-
-Package: gz-jetty-sdformat-python
-Depends: python3-sdformat16 (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Jetty without exposing the version number.

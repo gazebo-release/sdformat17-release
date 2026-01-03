@@ -1,24 +1,6 @@
-sdformat16 (16.0.0-1~noble) noble; urgency=medium
-
-  * sdformat16 16.0.0-1 release
-
- -- Ian Chen <ichen@openrobotics.org>  Fri, 26 Sep 2025 22:32:36 +0000
-
-sdformat16 (16.0.0~pre2-1~noble) noble; urgency=medium
-
-  * sdformat16 16.0.0~pre2-1 release
-
- -- Steve Peters <scpeters@openrobotics.org>  Thu, 11 Sep 2025 18:30:47 +0000
-
-sdformat16 (16.0.0~pre1-1~noble) noble; urgency=medium
-
-  * sdformat16 16.0.0~pre1-1 release
-
- -- Steve Peters <scpeters@openrobotics.org>  Mon, 25 Aug 2025 17:43:46 +0000
-
-sdformat16 (15.999.999-1~noble) noble; urgency=medium
+sdformat17 (16.999.999-1~noble) noble; urgency=medium
 
   * Stub to be removed after first entry
 
- -- Carlos Aguero <caguero@openrobotics.org>  Tue, 08 Oct 2024 21:02:41 +0200
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Sat, 03 Jan 2026 00:31:43 +0000
 
