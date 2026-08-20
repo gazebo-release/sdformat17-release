@@ -1,6 +1,5 @@
-sdformat17 (16.999.999-1~noble) noble; urgency=medium
+sdformat17 (17.0.0~pre1-1~noble) noble; urgency=medium
 
-  * Stub to be removed after first entry
+  * sdformat17 17.0.0~pre1-1 release
 
- -- Addisu Z. Taddese <addisu@openrobotics.org>  Sat, 03 Jan 2026 00:31:43 +0000
-
+ -- Addisu Z. Taddese <addisuzt@intrinsic.ai>  Thu, 20 Aug 2026 02:21:26 +0000
