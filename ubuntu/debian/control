@@ -12,15 +12,15 @@ Build-Depends: cmake,
                texlive-latex-extra,
                python3-pybind11,
                python3-dev,
-               libgz-tools2-dev,
-               libgz-math9-dev,
-               python3-gz-math9,
-               libgz-utils4-cli-dev,
-               libgz-utils4-dev,
+               libgz-tools3-dev,
+               libgz-math10-dev,
+               python3-gz-math10,
+               libgz-utils5-cli-dev,
+               libgz-utils5-dev,
                liburdfdom-dev,
                liburdfdom-headers-dev
 Vcs-Browser: https://github.com/gazebo-release/sdformat17-release
-Vcs-Git: https://github.com/gazebo-release/sdformat17-release
+Vcs-Git: https://github.com/gazebo-release/sdformat17-release.git
 Standards-Version: 4.5.1
 Homepage: http://sdformat.org
 
@@ -32,6 +32,9 @@ Depends:  sdformat17-sdf (>= ${source:Version}),
           ${shlibs:Depends},
           ${misc:Depends}
 Recommends: sdformat17-cli
+Provides: libsdformat-generic
+Conflicts: libsdformat-generic, libsdformat12, libsdformat14, libsdformat15, libsdformat16
+Replaces: libsdformat12, libsdformat14, libsdformat15, libsdformat16
 Multi-Arch: same
 Description: Simulation Description Format (SDF) parser - Shared library
  SDF is an XML file format that describes environments, objects, and robots
@@ -46,14 +49,17 @@ Package: libsdformat17-dev
 Architecture: any
 Section: libdevel
 Depends: libtinyxml2-dev,
-         libgz-tools2-dev,
-         libgz-math9-dev,
-         libgz-utils4-cli-dev,
-         libgz-utils4-dev,
+         libgz-tools3-dev,
+         libgz-math10-dev,
+         libgz-utils5-cli-dev,
+         libgz-utils5-dev,
          liburdfdom-dev,
          liburdfdom-headers-dev,
          libsdformat17 (= ${binary:Version}),
          ${misc:Depends}
+Provides: libsdformat-dev-generic
+Conflicts: libsdformat-dev-generic, libsdformat12-dev, libsdformat14-dev, libsdformat15-dev, libsdformat16-dev
+Replaces: libsdformat12-dev, libsdformat14-dev, libsdformat15-dev, libsdformat16-dev
 Multi-Arch: same
 Description: Simulation Description Format (SDF) parser - Development files
  SDF is an XML file format that describes environments, objects, and robots
@@ -69,7 +75,9 @@ Architecture: all
 Section: libdevel
 Depends: ${misc:Depends}
 Multi-Arch: foreign
-Conflicts: libsdformat1
+Provides: sdformat-sdf-generic
+Conflicts: sdformat-sdf-generic, libsdformat1, sdformat12-sdf, sdformat14-sdf, sdformat15-sdf, sdformat16-sdf
+Replaces: sdformat12-sdf, sdformat14-sdf, sdformat15-sdf, sdformat16-sdf
 Description: Simulation Description Format (SDF) parser - SDF files
  SDF is an XML file format that describes environments, objects, and robots
  in a manner suitable for robotic applications. SDF is capable of representing
@@ -87,6 +95,9 @@ Architecture: any
 Depends: libsdformat17 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
+Provides: sdformat-cli-generic
+Conflicts: sdformat-cli-generic, sdformat12-cli, sdformat14-cli, sdformat15-cli, sdformat16-cli
+Replaces: sdformat12-cli, sdformat14-cli, sdformat15-cli, sdformat16-cli
 Multi-Arch: no
 Description: Simulation Description Format (SDF) parser - CLI
  SDF is an XML file format that describes environments, objects, and robots
@@ -102,9 +113,12 @@ Description: Simulation Description Format (SDF) parser - CLI
 Package: python3-sdformat17
 Architecture: any
 Depends: ${misc:Depends},
-         python3-gz-math9,
+         python3-gz-math10,
          ${python3:Depends}
 Enhances: libsdformat17
+Provides: python3-sdformat-generic
+Conflicts: python3-sdformat-generic, python3-sdformat12, python3-sdformat14, python3-sdformat15, python3-sdformat16
+Replaces: python3-sdformat12, python3-sdformat14, python3-sdformat15, python3-sdformat16
 Description: Simulation Description Format (SDF) parser - SDF files
  SDF is an XML file format that describes environments, objects, and robots
  in a manner suitable for robotic applications. SDF is capable of representing
@@ -138,6 +152,9 @@ Architecture: all
 Section: doc
 Depends: ${misc:Depends}, libjs-jquery
 Multi-Arch: foreign
+Provides: sdformat-doc-generic
+Conflicts: sdformat-doc-generic, sdformat12-doc, sdformat14-doc, sdformat15-doc, sdformat16-doc
+Replaces: sdformat12-doc, sdformat14-doc, sdformat15-doc, sdformat16-doc
 Description: Simulation Description Format (SDF) parser - Documentation
  SDF is an XML file format that describes environments, objects, and robots
  in a manner suitable for robotic applications. SDF is capable of representing
@@ -148,3 +165,4 @@ Description: Simulation Description Format (SDF) parser - Documentation
  this package that reads SDF files and returns a C++ interface.
  .
  This package contains the program documentation
+
